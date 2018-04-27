@@ -2,3 +2,7 @@ language: cpp
 compiler: gcc
 script: make && make test
 #Can add notification section as desired
+
+before_install:
+    - pip install --user cpp-coveralls
+    - converalls --include "balanced.cpp" --gcov-options "\-lp'
