@@ -5,4 +5,6 @@ script: make && make test
 
 before_install:
     - pip install --user cpp-coveralls
+    
+after_success:
     - converalls --include "balanced.cpp" --gcov-options "\-lp'
